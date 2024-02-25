@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { usePosition } from "use-position";
+import Weather from "./components/Weather";
 
-function App() {
+// Bootstrap Classes
+const appClass = "card text-center m-3 px-4";
+
+const App = () => {
+  const [weather, setWeather] = useState();
+  const { latitude, longitude } = usePosition();
+  const key = process.env.REACT_APP_WEATHER_API_KEY;
+  const lang = navigator.language.split("-")[0];
+  const getWeather = async (lat, lon) => {
+    try {
+      const { data } = await axios.get(
+        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}&units=metric&lang=${lang}`
+      );
+      setWeather(data);
+    } catch {
+      alert("Veri alma işlemi başarısız.");
+    }
+  };
+  useEffect(() => {
+    latitude && longitude && getWeather(latitude, longitude);
+  }, [latitude, longitude]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={appClass}>
+      <Weather weather={weather} />
     </div>
   );
-}
+};
 
 export default App;
