@@ -8,11 +8,11 @@ React.js tabanlı, kullanıcının konumuna göre hava durumu bilgilerini göste
 <table>
   <tr>
     <td align="center">
-      <img src="https://github.com/ciftciyakup/reactjs-weather_app/blob/master/project-images/home-desktop.png" alt="Home Desktop" height="400"/>
+      <img src="https://github.com/ciftciyakup/reactjs-weather_app/blob/master/project-images/home-desktop.png" alt="Home Desktop" height="340"/>
       <br><em>Desktop</em>
     </td>
     <td align="center">
-      <img src="https://github.com/ciftciyakup/reactjs-weather_app/blob/master/project-images/home-mobile.png" alt="Home Mobile" height="400"/>
+      <img src="https://github.com/ciftciyakup/reactjs-weather_app/blob/master/project-images/home-mobile.png" alt="Home Mobile" height="340"/>
       <br><em>Mobil</em>
     </td>
   </tr>
@@ -22,11 +22,11 @@ React.js tabanlı, kullanıcının konumuna göre hava durumu bilgilerini göste
 <table>
   <tr>
     <td align="center">
-      <img src="https://github.com/ciftciyakup/reactjs-weather_app/blob/master/project-images/access_denied-desktop.png" alt="Home Desktop" height="400"/>
+      <img src="https://github.com/ciftciyakup/reactjs-weather_app/blob/master/project-images/access_denied-desktop.png" alt="Home Desktop" height="340"/>
       <br><em>Desktop</em>
     </td>
     <td align="center">
-      <img src="https://github.com/ciftciyakup/reactjs-weather_app/blob/master/project-images/access_denied-mobile.png" alt="Home Mobile" height="400"/>
+      <img src="https://github.com/ciftciyakup/reactjs-weather_app/blob/master/project-images/access_denied-mobile.png" alt="Home Mobile" height="340"/>
       <br><em>Mobil</em>
     </td>
   </tr>
