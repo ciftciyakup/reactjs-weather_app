@@ -3,9 +3,6 @@ import React, { useEffect, useState } from "react";
 import { usePosition } from "use-position";
 import Weather from "./components/Weather";
 
-// Bootstrap Classes
-const appClass = "card text-center m-3 px-4";
-
 const App = () => {
   const [weather, setWeather] = useState();
   const { latitude, longitude } = usePosition();
@@ -25,8 +22,10 @@ const App = () => {
     latitude && longitude && getWeather(latitude, longitude);
   }, [latitude, longitude]);
   return (
-    <div className={appClass}>
-      <Weather weather={weather} />
+    <div className="d-flex flex-column align-items-center justify-content-center vh-100">
+      <div className="card text-center m-3 px-4">
+        <Weather weather={weather} />
+      </div>
     </div>
   );
 };

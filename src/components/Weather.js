@@ -1,24 +1,19 @@
 import React, { Fragment } from "react";
 
-// Bootstrap Classes
-const imgClass = "card-img-top";
-const cardBodyClass = "card-body";
-const fontSizeClass = "fs-4";
-
 const Weather = (props) => {
   const { weather } = props;
-  if (!weather) return <p>Konum tespiti gerçekleştirilemedi...</p>;
+  if (!weather) return <h1 className="my-3">Konum tespiti gerçekleştirilemedi...</h1>;
   const { icon } = weather.weather[0];
   return (
     <Fragment>
       <img
         src={`http://openweathermap.org/img/wn/${icon}@4x.png`}
-        className={imgClass}
+        className="card-img-top"
         alt="icon"
       />
-      <div className={cardBodyClass}>
-        <h3>{weather.name}</h3>
-        <p className={fontSizeClass}>
+      <div className="card-body">
+        <h1>{weather.name}</h1>
+        <p className="fs-1">
           {weather.weather
             .map((item) =>
               item.description
